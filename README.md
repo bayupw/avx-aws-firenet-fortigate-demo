@@ -42,6 +42,9 @@ export AVIATRIX_CONTROLLER_IP="aviatrixcontroller.aviatrix.lab"
 export AVIATRIX_USERNAME="admin"
 export AVIATRIX_PASSWORD="aviatrix123"
 export TF_VAR_aws_account="AWS-Aviatrix-Account"
+export AWS_ACCESS_KEY_ID="A1b2C3d4E5"
+export AWS_SECRET_ACCESS_KEY="A1b2C3d4E5"
+export AWS_DEFAULT_REGION="ap-southeast-2"
 ```
 
 Terraform workflow

@@ -14,3 +14,11 @@ terraform {
     }
   }
 }
+
+provider "aws" {
+  # Configuration options
+}
+
+provider "aviatrix" {
+  # Configuration options
+}
