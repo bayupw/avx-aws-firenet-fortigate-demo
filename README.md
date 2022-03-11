@@ -59,14 +59,13 @@ terraform apply -auto-approve
 | Name | Description | Default | Required |
 |------|-------------|---------|----------|
 | aws_region | AWS Region | `ap-southeast-2` | no |
-| aws_iam_role | Bootstrap IAM role name | `bootstrap-VM-S3-role` | no |
-| aws_iam_policy | Bootstrap IAM policy | `bootstrap-VM-S3-policy` | no |
-| bootstrap_bucket | Bootstrap S3 bucket name | `pan-bootstrap-bucket` | no |
+| aws_iam_role | Bootstrap IAM role name | `bootstrap-FortiGate-S3-role` | no |
+| aws_iam_policy | Bootstrap IAM policy | `bootstrap-FortiGate-S3-policy` | no |
+| bootstrap_bucket | Bootstrap S3 bucket name | `fortigate-bootstrap-bucket` | no |
 | aws_account | AWS Account for Aviatrix Controller | `aws-account` | yes |
 | firenet_vpc | Firenet VPC name | `fg-firenet-vpc` | no |
 | spoke1_vpc | Firenet VPC name | `fg-spoke1-vpc` | no |
 | spoke2_vpc | Firenet VPC name | `fg-spoke2-vpc` | no |
-| firenet_vpc_cidr | Firenet VPC CIDR block size | `10.0.0.0/23` | no |
 | firenet_gw | Firenet gateway name | `fg-firenet-gw` | no |
 | firenet_gw_size | Transit firenet gateway size | `c5.xlarge` | no |
 | fw_instance_name | Firewall instance name | `fw-instance` | no |
