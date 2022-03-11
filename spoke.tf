@@ -43,7 +43,7 @@ data "aws_ami" "amazon_linux_2" {
 }
 
 resource "aws_security_group" "spoke1_instance_sg" {
-  name        = "spoke1/sg-instance"
+  name        = "${var.var.spoke1_vpc}/sg-instance"
   description = "Allow all traffic from VPCs inbound and all outbound"
   vpc_id      = module.spoke1.vpc.vpc_id
 
@@ -79,7 +79,7 @@ echo ec2-user:${var.vm_admin_password} | sudo chpasswd
 EOF
 
   tags = {
-    Name = "spoke1-instance"
+    Name = "${var.var.spoke1_vpc}-instance"
   }
   #user_data = file("install-nginx.sh")
 }
@@ -102,7 +102,7 @@ resource "aws_security_group" "spoke2_instance_sg" {
     cidr_blocks = ["0.0.0.0/0"]
   }
   tags = {
-    Name = "spoke2/sg-instance"
+    Name = "${var.var.spoke2_vpc}/sg-instance"
   }
 }
 
@@ -121,7 +121,7 @@ echo ec2-user:${var.vm_admin_password} | sudo chpasswd
 EOF
 
   tags = {
-    Name = "spoke2-instance"
+    Name = "${var.var.spoke2_vpc}-instance"
   }
   #user_data = file("install-nginx.sh")
 }
